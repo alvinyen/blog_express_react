@@ -1,21 +1,19 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
+var MasterLayout = require('./masterlayout');
 
-class HelloMessage extends React.Component {
-    render(){
-        return <div>
+var HelloMessage = React.createClass({
+
+
+    render:function(){
+        return (
+            <MasterLayout title={this.props.title}>
+                <div>
                     <h1>YOYOIOIO</h1><br/>
-                    <div> Hello {this.props.age}</div>
-                 </div> ;
+                    <div> Hello {this.props.age} </div>
+                </div>
+            </MasterLayout>
+        );
     }
-}
-
-// var HelloMessage = React.createClass({
-//     render: function(){
-//         return <div>Hello {this.props.name}</div>;
-//     }
-// });
-
-// ReactDOM.render(<HelloMessage/>,document.getElementsBy..);
+});
 
 module.exports = HelloMessage ;
